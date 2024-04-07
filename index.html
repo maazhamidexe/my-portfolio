@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add your CSS styles here */
+    header {
+      position: relative;
+    }
+
+    #profile-picture {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-200%);
+      height: 200px;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="profile-picture" src="image.jpg" alt="Profile Picture">
+
+    <div>
+    <h1>Maaz Hamid</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div>
+        <br> 
+        <br>
+      </div>
+      <h2>About Me</h2>
+      <p>I am an AI undergrad at GIKI with a passion for building innovative software applications.</p>
+      <p>My skills include (list your skills here).</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>BiteMate - Food Delivery App</h3>
+        <p>Developed a user-friendly food delivery app using (technologies used).</p>
+        <a href="https://your-project-link.com">View Project</a>  <img src="bitemate.PNG" alt="BiteMate Screenshot" height="100"> </div>
+      <div class="project">
+        <h3>Expense Tracker</h3>
+        <p>Created an object-oriented application for managing personal finances.</p>
+      </div>
+      </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for any inquiries or project collaborations.</p>
+      <ul>
+        <div id = "links">
+        <li><a href="mailto:maazhamid12@gmail.com" style="color: grey;">Email: maazhamid12@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/your-linkedin-profile" style = "color: grey;">LinkedIn Profile</a></li>  
+        </div>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Maaz Hamid Portfolio</p>
+  </footer>
+
+  <script>
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      var profilePicture = document.getElementById("profile-picture");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        profilePicture.style.opacity = "0";
+      } else {
+        profilePicture.style.opacity = "1";
+      }
+    }
+  </script>
+</body>
+</html>
